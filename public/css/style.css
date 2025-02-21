@@ -1,0 +1,273 @@
+.video-container {
+    position: relative;
+    width: 100vw; /* Chiều rộng full màn hình */
+    height: 100vh; /* Chiều cao full màn hình */
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa video */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cắt video để vừa khung */
+}
+
+/* ==== HEADER ==== */
+.custom-header {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    padding: 15px 0;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-header .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-header .logo img {
+    height: 50px;
+}
+
+.custom-header .search-bar {
+    display: flex;
+    background: white;
+    border-radius: 30px;
+    padding: 5px 10px;
+    width: 40%;
+}
+
+.custom-header .search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px;
+}
+
+.custom-header .search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ff7e5f;
+}
+
+.custom-header .header-icons a {
+    color: white;
+    font-size: 22px;
+    margin-left: 15px;
+    position: relative;
+}
+
+.custom-header .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==== NAVBAR ==== */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+.custom-header .logo img {
+    height: 50px; /* Điều chỉnh kích thước logo */
+    border-radius: 50%; /* Bo tròn */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+    border: 2px solid white; /* Viền trắng để đẹp hơn */
+}
+body {
+    background-color: #ffffff; /* Nền trắng tinh tế */
+    color: #222; /* Màu chữ đậm */
+}
+.custom-header {
+    background: linear-gradient(to right, #2c3e50, #4ca1af); /* Xanh navy + xanh cổ điển */
+}
+.button {
+    background-color: #ff5e62; /* Màu nút theo chủ đề */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px; /* Bo góc mềm mại */
+    border: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #e64a45; /* Hiệu ứng khi di chuột */
+}
+/* Hiệu ứng nền mờ giúp chữ dễ đọc */
+.caption-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Nền tối 50% */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Tiêu đề lớn và nổi bật */
+.carousel-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Mô tả nhỏ hơn nhưng rõ ràng */
+.carousel-text {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    margin-bottom: 15px;
+}
+
+/* Nút bấm bắt mắt */
+.btn-shop {
+    background: linear-gradient(45deg, #4866b7, #fad0c4);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+/* Hiệu ứng hover khi di chuột vào */
+.btn-shop:hover {
+    background: linear-gradient(45deg, #2f2a73, #21234f);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(52, 66, 173, 0.5);
+}
+
+/* Container chính của form */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Tiêu đề của form */
+.auth-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Input field */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #ff7eb3;
+    box-shadow: 0 0 5px rgba(255, 120, 150, 0.5);
+}
+
+/* Nút đăng ký/đăng nhập */
+.btn-auth {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    border: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-auth:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 120, 150, 0.5);
+}
+
+/* Link điều hướng */
+.auth-container p {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.auth-container a {
+    color: #ff7eb3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* Nút đăng nhập/đăng ký trong header */
+.btn-header {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-header:hover {
+    transform: scale(1.1);
+}
+
+/* Màu sắc riêng cho từng nút */
+.btn-register {
+    background: #ff7eb3;
+    color: white;
+}
+
+.btn-register:hover {
+    background: #ff5f9e;
+}

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -23,10 +25,23 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.dashboard');
 });
 
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 Route::get('/', [PageController::class, 'home'])->name('home');
-Route::get('/shop', [ProductController::class, 'index'])->name('shop');
+Route::get('/shop', [PageController::class, 'shop'])->name('shop');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/about', [PageController::class, 'about'])->name('about');
-Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.detail');
+Route::get('/cart', [PageController::class, 'cart'])->name('cart');
+Route::get('/checkout', [PageController::class, 'checkout'])->name('checkout');
+Route::get('/profile', [PageController::class, 'profile'])->name('profile');
+Route::get('/order-history', [PageController::class, 'orderHistory'])->name('order.history');
+Route::get('/product/{id}', [PageController::class, 'productDetail'])->name('product.detail');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 require __DIR__.'/auth.php';
